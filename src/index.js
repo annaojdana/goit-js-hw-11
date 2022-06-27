@@ -14,7 +14,7 @@ const { searchQuery } = searchForm.elements;
 // Listening for the submit
 
 searchForm.addEventListener("submit", searching);
-btnMore.addEventListener("click", nextPage)
+btnMore.addEventListener("click", nextPage);
 // Controls the group number
 let page = 1;
 // Controls the number of items in the group
@@ -26,6 +26,7 @@ let limit = 40;
 function searching(event) {
   event.preventDefault();
   console.log(searchQuery.value);
+  page = 1;
   getPhotos(searchQuery.value, limit, page)
     .then(photos => {
       renderPhotosInfo(photos);
@@ -39,7 +40,17 @@ function searching(event) {
 };
 
 function nextPage() {
-  
+  console.log("ok");
+  page += 1;
+  console.log(page);
+   getPhotos(searchQuery.value, limit, page)
+    .then(photos => {
+      renderPhotosInfo(photos);
+    }
+    )
+    .catch(error => {
+     console.log(error);
+    })
 }
 
 function renderPhotosInfo({totalHits, hits}) {
