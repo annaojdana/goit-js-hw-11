@@ -21,7 +21,6 @@ let page = 1;
 let limit = 40;
 
 
-
 // Functions
 function searching(event) {
   event.preventDefault();
@@ -72,9 +71,9 @@ function renderPhotosInfo({totalHits, hits}) {
   };
   console.log(totalPages);
     const markup = hits
-      .map(({webformatURL, tags, likes, views, comments,downloads}) => {
+      .map(({webformatURL, largeImageURL, tags, likes, views, comments,downloads}) => {
         return `<div class="photo-card">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+   <a class="gallery__link" href="${largeImageURL}"><img src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
   <div class="info">
     <p class="info-item">
       <b>Likes</b>
@@ -99,7 +98,7 @@ function renderPhotosInfo({totalHits, hits}) {
 
     gallery.innerHTML = markup;
 
-
+const lightbox = new SimpleLightbox('.gallery__link');
 };
 
 async function getPhotos(input, limit, page) {
