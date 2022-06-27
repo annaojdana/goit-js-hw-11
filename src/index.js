@@ -67,7 +67,9 @@ function renderPhotosInfo({totalHits, hits}) {
   if (totalPages > 1) {
     btnMore.style.display = "block";
   };
-
+ if (page === totalPages || (page>totalPages&&page<totalPages+1) ) {
+    btnMore.style.display = "none";
+  };
   console.log(totalPages);
     const markup = hits
       .map(({webformatURL, tags, likes, views, comments,downloads}) => {
@@ -75,16 +77,20 @@ function renderPhotosInfo({totalHits, hits}) {
   <img src="${webformatURL}" alt="${tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
-      <b>Likes</b> ${likes}
+      <b>Likes</b>
+      <br>${likes}
     </p>
     <p class="info-item">
-      <b>Views</b>  ${views}
+      <b>Views</b>
+      <br>${views}
     </p>
     <p class="info-item">
-      <b>Comments</b>  ${comments}
+      <b>Comments</b>
+      <br>${comments}
     </p>
     <p class="info-item">
-      <b>Downloads</b>  ${downloads}
+      <b>Downloads</b>
+      <br>${downloads}
     </p>
   </div>
 </div>`;
