@@ -40,12 +40,20 @@ function searching(event) {
 };
 
 function nextPage() {
+
   console.log("ok");
   page += 1;
   console.log(page);
    getPhotos(searchQuery.value, limit, page)
     .then(photos => {
       renderPhotosInfo(photos);
+      const { height: cardHeight } = gallery
+  .firstElementChild.getBoundingClientRect();
+console.log(cardHeight);
+ window.scrollTo({
+  top: cardHeight/2,
+  behavior: 'smooth',
+});
     }
     )
     .catch(error => {
@@ -54,6 +62,7 @@ function nextPage() {
 }
 
 function renderPhotosInfo({totalHits, hits}) {
+
   const totalPages = totalHits / limit;
   if (totalPages > 1) {
     btnMore.style.display = "block";
