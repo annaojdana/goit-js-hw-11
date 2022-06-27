@@ -11,6 +11,7 @@ body {
   color: #212121;
   line-height: 1.5;
   margin: 0;
+
 }
 p{margin: 0;}
 :focus {
@@ -19,7 +20,7 @@ p{margin: 0;}
 
 .search-form {
   width: 100%;
-  height: 60px;
+  height: 100px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -59,8 +60,8 @@ p{margin: 0;}
   justify-content: space-around;
 }
 .photo-card{
-  margin-bottom: 20px;
-  width: 300px;
+  margin-bottom: 40px;
+  width: 400px;
 -webkit-box-shadow: 3px 7px 14px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 7px 14px -9px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 7px 14px -9px rgba(0, 0, 0, 0.75);
@@ -68,13 +69,13 @@ p{margin: 0;}
 .photo-card img {
   display: block;
   width: 100%;
-  height: 150px;
+  height: 200px;
 }
 .info{
   display: flex;
   padding: 10px;
   justify-content: space-around;
-  font-size: 12px;
+  font-size: 16px;
 }
 .info-item{
   text-align: center;
@@ -84,7 +85,8 @@ input {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 7px 14px 9px;
-  transition: 0.4s;
+  font-size: 16px;
+  transition: border 0.4s;
 }
 input:focus{
 border: 2px solid rgba(46, 164, 79, .4);
@@ -99,9 +101,9 @@ button {
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   color: #fff;
   cursor: pointer;
-  font-size: 14px;
+font-size: 16px;
   font-weight: 600;
-  line-height: 20px;
+  letter-spacing: 0.5;
   padding: 6px 16px;
   text-align: center;
 
