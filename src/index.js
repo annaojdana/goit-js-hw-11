@@ -1,6 +1,10 @@
 import './css/styles.css';
+
 import Notiflix from 'notiflix';
+import 'notiflix/dist/notiflix-3.2.5.min.css';
+
 import axios from "axios";
+
 import SimpleLightbox from "simplelightbox";
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -15,7 +19,8 @@ const { searchQuery } = searchForm.elements;
 
 // Controls the number of items in the group
 let limit = 40;
-// Listening for the submit
+
+// Listening for the buttons
 
 searchForm.addEventListener("submit", search);
 btnMore.addEventListener("click", loadMore);

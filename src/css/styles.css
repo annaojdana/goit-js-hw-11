@@ -13,7 +13,9 @@ body {
   margin: 0;
 
 }
-p{margin: 0;}
+p {
+  margin: 0;
+}
 :focus {
   outline: none;
 }
@@ -42,7 +44,7 @@ p{margin: 0;}
     background-position: 0% 50%;
   }
 }
-.search-icon{
+.search-icon {
   width: 15px;
   height: 15px;
   fill: #fafafa;
@@ -53,9 +55,9 @@ p{margin: 0;}
   width: 40px;
   height: 40px;
   padding: 0px;
-background-color: #2ea44f;
-border: 1px solid rgba(27, 31, 35, .15);
-border-left: 0px;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-left: 0px;
 }
 .load-more{
   margin-bottom: 20px;
@@ -86,7 +88,7 @@ border-left: 0px;
 .photo-card{
   margin-bottom: 40px;
   width: 400px;
--webkit-box-shadow: 3px 7px 14px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 7px 14px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 7px 14px -9px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 7px 14px -9px rgba(0, 0, 0, 0.75);
 }
@@ -106,7 +108,7 @@ border-left: 0px;
 }
 
 input {
-height: 40px;
+  height: 40px;
   border: 1px solid rgba(27, 31, 35, .15);
   border-right: 0px;
   border-bottom-left-radius: 6px;
@@ -115,14 +117,10 @@ height: 40px;
   font-size: 16px;
   transition: border 0.4s;
 }
-input:focus{
-border: 2px solid rgba(46, 164, 79, .4);
-border-right: 0px;
+input:focus {
+  border: 2px solid rgba(46, 164, 79, .4);
+  border-right: 0px;
 }
-
-
-
-
 
 button:hover {
   background-color: #2c974b;
